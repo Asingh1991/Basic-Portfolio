@@ -2,14 +2,22 @@
 * { 
     box-sizing: border-box;
   } 
+
+*:before,
+*:after {
+ box-sizing: border-box;
+}
   
   html, body {
       height: 100%;
       margin: 0;
+      position: relative;
   }
   
   body {
       background: url("../images/dark-denim-3.png");
+      height: 100%;
+      position: relative;
       font-size: 18px;
       line-height: 34px;
       font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -67,7 +75,10 @@
   /* main */
   
   #main-container {
-      min-height: 100%
+      min-height: 100vh;
+      overflow:hidden;
+      display: block;
+      position: relative;
   }
   
   .main-section {
@@ -83,9 +94,9 @@
   
   footer {
       clear: both;
-      position: relative;
+      position: absolute;
       bottom: 0;
-      width: 80%;
+      width: 100%;
       text-align: center;
       padding: 30px 0;
       margin-top: -170px;
@@ -141,4 +152,31 @@
   {
       background-color: #4aaaa5;
       color: #fff;
+  }
+  a{
+      font-size: 30px;
+      padding: 15px;
+  }
+  a:link {
+    color: green; 
+    background-color: transparent; 
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
   }
